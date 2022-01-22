@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln -s $PWD/i3 $HOME/.config
+ln -s $PWD/rofi $HOME/.config
