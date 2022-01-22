@@ -1,0 +1,1 @@
+sudo apt-get update && sudo apt-get install playerctl feh arandr lxappearance arc-theme gnome-icon-theme faba-icon-theme moka-icon-theme rofi compton
