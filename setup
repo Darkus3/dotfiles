@@ -1,5 +1,10 @@
 #!/bin/bash
 
-ln -s $PWD/i3 $HOME/.config
-ln -s $PWD/rofi $HOME/.config
+# Test if package exist, if yes, configure it accordingly
+dpkg-query -l i3 2>/dev/null 1>/dev/null && ln -fs $PWD/i3 $HOME/.config
+
+dpkg-query -l rofi 2>/dev/null 1>/dev/null && ln -fs $PWD/rofi $HOME/.config
+
+# For bashrc, backup if existing config exist
+test -f $HOME/.bashrc && mv $HOME/.bashrc $HOME/.bashrc_save
 ln -s $PWD/.bashrc $HOME/.bashrc
