@@ -11,3 +11,7 @@ test -f $bashrc && test -L $bashrc || (mv $bashrc $HOME/.bashrc_save ; ln -s $PW
 
 # Run vim conf
 $PWD/vim/setup
+
+#------ Ending the script
+# run .barshrc file to apply changes
+source $HOME/.bashrc
