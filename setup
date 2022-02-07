@@ -6,4 +6,5 @@ dpkg-query -l i3 2>/dev/null 1>/dev/null && ln -fs $PWD/i3 $HOME/.config
 dpkg-query -l rofi 2>/dev/null 1>/dev/null && ln -fs $PWD/rofi $HOME/.config
 
 # For bashrc, backup if existing config exist
-test -f $HOME/.bashrc && test -L $HOME/.bashrc || (mv $HOME/.bashrc $HOME/.bashrc_save ; ln -s $PWD/.bashrc $HOME/.bashrc)
+bashrc="$HOME/.bashrc"
+test -f $bashrc && test -L $bashrc || (mv $bashrc $HOME/.bashrc_save ; ln -s $PWD/.bashrc $bashrc)
