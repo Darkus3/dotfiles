@@ -8,3 +8,6 @@ dpkg-query -l rofi 2>/dev/null 1>/dev/null && ln -fs $PWD/rofi $HOME/.config
 # For bashrc, backup if existing config exist
 bashrc="$HOME/.bashrc"
 test -f $bashrc && test -L $bashrc || (mv $bashrc $HOME/.bashrc_save ; ln -s $PWD/.bashrc $bashrc)
+
+# Run vim conf
+$PWD/vim/setup
